@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業財金進修講座總覽</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; 
+        }
+    </style>
+</head>
+<!-- 頁面背景設定為明亮主題 -->
+<body class="bg-gray-50 min-h-screen flex flex-col text-gray-800">
+    
+    <!-- Header: 藍色漸層 -->
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="bg-white/20 backdrop-blur-sm p-3 rounded-lg shadow-sm border border-white/30">
+                    <i class="fa-solid fa-chart-line text-2xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold tracking-wide text-white">專業財金進修講座</h1>
+                    <p class="text-blue-100 text-sm mt-1">掌握趨勢・全齡金融・守護的力量</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-10">
+        <div class="mb-10 text-center">
+            <h2 class="text-3xl font-bold text-blue-900 relative inline-block">
+                熱門開課總覽
+                <div class="absolute w-2/3 h-1 bg-blue-500 bottom-[-10px] left-1/6 rounded-full transform translate-x-1/4"></div>
+            </h2>
+        </div>
+
+        <!-- 課程卡片容器 (響應式網格) -->
+        <div id="course-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- 卡片將透過 JavaScript 動態生成於此 -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2 text-gray-300"><i class="fa-solid fa-building-columns mr-2"></i>專業進修・成就非凡</p>
+            <p class="text-sm">© 2026 財金進修團隊. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data and Rendering -->
+    <script>
+        // 課程資料陣列 (已精確對應指定的圖片檔名與資料)
+        const courses = [
+            {
+                title: "全齡金融保險藍海關鍵密碼",
+                image: "S__50708522.jpg",
+                instructor: "蕭輔民 老師",
+                time: "115/11/13 (五) 13:30-16:30",
+                location: "台北市信義區基隆路一段210號1F教室",
+                fee: "優惠價 $1,000 (原價 $2,500)",
+                deadline: "11/5",
+                link: "https://forms.gle/gBeAr2VUbUwSzH657",
+                features: ["開發藍海商機", "挖掘保險存摺", "圖解各職業退休制度"]
+            },
+            {
+                title: "VIS資產活化課程",
+                image: "944766be-72d3-437f-8411-66eb44420ddc.png",
+                instructor: "Rick (基金神探)",
+                time: "2026.11.20 (五) 09:00 - 13:00",
+                location: "請洽單位窗口",
+                fee: "請洽單位窗口",
+                deadline: "11/18 中午12點",
+                link: "https://forms.gle/hpF33mXnDdAPk9PC8",
+                features: ["會挑基金", "會講財富自我循環", "會用印鈔機", "會用變壓器"]
+            },
+            {
+                title: "創富 & 守富 傳承財富",
+                image: "IMG_4410_2.jpg",
+                instructor: "吳明蒼 律師、王千榕 地政士",
+                time: "2026.11.28 (六) 13:30-16:30",
+                location: "臺北市中山區建國北路二段238號6樓",
+                fee: "請洽單位窗口",
+                deadline: "11/5 中午12點",
+                link: "https://forms.gle/2xMcU3aDHmgQTB8m9",
+                features: ["安心傳承: 法律保障降低風險", "和諧家族: 避免爭議守護親情", "三本帳本: 完整規劃清楚傳承", "財富永續: 資產安全世代延續"]
+            },
+            {
+                title: "富宅00838A 富宅財金高峰論壇",
+                image: "S__169345031.jpg",
+                instructor: "財金資源小組團隊",
+                time: "10/2起至2/19(雙週五) 09:00-10:30",
+                location: "請洽單位窗口",
+                fee: "請洽單位窗口",
+                deadline: "請依各場次公告",
+                link: "https://forms.gle/4MwXenbGV5RdjwAC6",
+                features: ["聚焦財經趨勢", "掌握投資脈動", "共創財富未來"]
+            }
+        ];
+
+        // 渲染課程卡片的函數
+        function renderCourses() {
+            const grid = document.getElementById('course-grid');
+            grid.innerHTML = '';
+
+            courses.forEach(course => {
+                // 產生亮點清單 HTML
+                const featuresHtml = course.features.map(feature => 
+                    `<li class="flex items-start text-sm text-gray-600 mb-1.5">
+                        <i class="fa-solid fa-circle-check text-blue-500 mt-0.5 mr-2"></i>
+                        <span class="leading-tight">${feature}</span>
+                    </li>`
+                ).join('');
+
+                // 卡片 HTML 結構 (明亮風格：白底、圓角、陰影)
+                const cardHtml = `
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-2 flex flex-col overflow-hidden text-gray-800 border border-gray-100">
+                        
+                        <!-- 圖片區塊 -->
+                        <div class="relative h-56 bg-gray-100 overflow-hidden group">
+                            <!-- 加入 onerror 備用圖片機制以防圖片遺失 -->
+                            <img src="${course.image}" alt="${course.title}" 
+                                 class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=Image+Not+Found';">
+                            
+                            <!-- 熱烈報名中標籤 -->
+                            <div class="absolute top-4 right-4 bg-red-600/95 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md flex items-center">
+                                <i class="fa-solid fa-fire mr-1.5"></i> 熱烈報名中
+                            </div>
+                        </div>
+
+                        <!-- 內容區塊 -->
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 line-clamp-2 min-h-[3.5rem]">${course.title}</h3>
+                            
+                            <!-- 資訊欄位 -->
+                            <div class="space-y-3 text-sm text-gray-700 flex-grow">
+                                <p class="flex items-start">
+                                    <i class="fa-solid fa-user-tie mt-0.5 mr-3 text-blue-600 w-4 text-center"></i>
+                                    <span class="font-medium mr-1">講師：</span> ${course.instructor}
+                                </p>
+                                <p class="flex items-start">
+                                    <i class="fa-regular fa-calendar mt-0.5 mr-3 text-blue-600 w-4 text-center"></i>
+                                    <span class="font-medium mr-1">時間：</span> <span class="break-words w-full">${course.time}</span>
+                                </p>
+                                <p class="flex items-start">
+                                    <i class="fa-solid fa-map-location-dot mt-0.5 mr-3 text-blue-600 w-4 text-center"></i>
+                                    <span class="font-medium mr-1">地點：</span> ${course.location}
+                                </p>
+                                <p class="flex items-start">
+                                    <i class="fa-solid fa-money-bill mt-0.5 mr-3 text-blue-600 w-4 text-center"></i>
+                                    <span class="font-medium mr-1">費用：</span> ${course.fee}
+                                </p>
+                                <div class="mt-2 text-red-600 font-bold flex items-center">
+                                    <i class="fa-solid fa-hourglass-half mr-3 w-4 text-center"></i>
+                                    <span>報名截止：${course.deadline}</span>
+                                </div>
+                            </div>
+                            
+                            <!-- 亮點區塊 -->
+                            <div class="mt-5 pt-4 border-t border-gray-100">
+                                <p class="font-bold text-sm text-gray-800 mb-3 flex items-center">
+                                    <i class="fa-solid fa-star text-amber-400 mr-2"></i>課程亮點
+                                </p>
+                                <ul class="space-y-1">
+                                    ${featuresHtml}
+                                </ul>
+                            </div>
+                            
+                            <!-- 按鈕 -->
+                            <div class="mt-6 pt-2">
+                                <a href="${course.link}" target="_blank" class="w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-4 rounded-xl transition-colors duration-200 shadow-md hover:shadow-lg">
+                                    <i class="fa-solid fa-paper-plane mr-2"></i> 立即報名
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += cardHtml;
+            });
+        }
+
+        // 當網頁載入完成後執行渲染
+        window.onload = renderCourses;
+    </script>
+</body>
+</html>
